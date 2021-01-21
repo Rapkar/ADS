@@ -1,0 +1,12 @@
+<?php
+//change permalink to meta box link
+add_filter( 'post_type_link', 'my_custom_permalinks', 10, 2 );
+function my_custom_permalinks( $permalink, $post ) {
+  if( 'ads' == get_post_type() ) {
+    $value = get_post_meta( $post->ID, '_utechia_Adress_meta_key', true );
+      return str_replace(  $permalink,$value, $permalink );
+} else {
+  return $permalink;
+}
+
+}
