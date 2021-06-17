@@ -4,8 +4,8 @@
  * Plugin Name:       Utechia ADS
  * Plugin URI:        https://Utechia.com
  * Description:       ADS FOR WP 
- * Version:           1.0.0
- * Requires at least: 4.9
+ * Version:           1.0
+ * Requires at least: 5
  * Requires PHP:      5.6
  * Author:           Utechia(Hossein Soltanian)
  * Author URI:        https://techroot.ir
@@ -36,6 +36,10 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
  * @see get_post_type_labels() for label keys.
  */
 
+
+// load Style
+require_once(__DIR__.'/inc/Style.php');
+// load Style
 
  //Custom Post Type function
 
