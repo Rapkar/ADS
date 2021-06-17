@@ -1,0 +1,13 @@
+reset{
+    cursor: pointer;
+}
+reset.load{
+transition: all 20s ease;
+transform: rotate(3600deg);
+}
+.Click span.replace{
+    transition: all 1s ease;
+}
+.Click span{
+    transition: all 1s ease;
+}
