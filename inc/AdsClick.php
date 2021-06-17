@@ -12,9 +12,9 @@ class utechiaads_shortcode_class {
         $loop = new WP_Query( $args ); 
             
         while ( $loop->have_posts() ) : $loop->the_post(); 
+                return "<a href='".get_the_permalink()."' post-id='". get_the_ID() ."'  class='widget-utechia-ads'><img class='img-fluid' src='".get_the_post_thumbnail_url() ."' ></img></a>";
 
-        return "<a href='".get_the_permalink()."' post-id='". get_the_ID() ."'  class='widget-utechia-ads'><img class='img-fluid' src='".get_the_post_thumbnail_url() ."' ></img></a>";
-        
+
         endwhile;
     
         wp_reset_postdata(); 
@@ -34,7 +34,8 @@ function Utechia_Clicks_Ads() {
     if (  isset( $_POST['post_id'] ) && isset($_POST['action']) )
      {
         $count = get_post_meta( $_POST['post_id'], 'Clicks', true );
-        update_post_meta( $_POST['post_id'], 'Clicks', ( $count === '' ? 1 : $count + 1 ) );
+        $count=esc_html($count);
+        update_post_meta( sanitize_text_field($_POST['post_id']), 'Clicks', ( $count === '' ? 1 : $count + 1 ) );
     }
     exit();
 
