@@ -2,7 +2,7 @@
 /*
  * @wordpress-plugin
  * Plugin Name:       Utechia ADS
- * Plugin URI:        https://Utechia.com
+ * Plugin URI:         https://techroot.ir
  * Description:       ADS FOR WP 
  * Version:           1.0
  * Requires at least: 5
