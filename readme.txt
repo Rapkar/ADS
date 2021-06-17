@@ -1,9 +1,10 @@
 === ADS Master ===
-Contributors:Hossein Soltanian
+Contributors:hosseinbidar7
 Donate link: techroot.ir
 Tags: ads,advertising,advertisement,advertise
-Requires at least: 5
-Tested up to: 5.7
+Requires at least: 5.6
+Requires PHP: 7.2
+Tested up to: 5.6
 Stable tag: 1.0
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
@@ -33,22 +34,20 @@ This section describes how to install the plugin and get it working.
 e.g.
 1. Upload `adsmaster.php` to the `/wp-content/plugins/` directory
 1. Activate the adsmaster through the 'Plugins' menu in WordPress
+
 == Frequently Asked Questions ==
-= Is the plugin free? =
-yes , you can use plugin 100% free.
-== Screenshots ==
-<ol>
-<li></li>
-<li></li>
-</ol>
+
+FAQ's usually end up in the [https://github.com/Rapkar/ADS/issues).
+
 == Changelog ==
-= 1.0 =
-* A change since the previous version.
-* Another change.
-= 0.5 =
+1.0
+
 * List versions from most recent at top to oldest at bottom.
-== Upgrade Notice ==
-= 1.0 =
+
+ Upgrade Notice 
+
+1.1 
+
 Upgrade notices describe the reason a user should upgrade. No more than 300 characters.
 = 0.5 =
 This version fixes a security related bug. Upgrade immediately.
