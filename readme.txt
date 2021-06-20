@@ -29,14 +29,19 @@ e.g.
 
 FAQ's usually end up in the [https://github.com/Rapkar/ADS/issues).
 
+== Screenshots ==
+
+1. view list of ads
+2. ads post panel
+
 == Changelog ==
 1.0
 
 * List versions from most recent at top to oldest at bottom.
 
- Upgrade Notice 
+== Upgrade Notice == 
 
-1.1 
+1.0
 
 Upgrade notices describe the reason a user should upgrade. No more than 300 characters.
 = 0.5 =
