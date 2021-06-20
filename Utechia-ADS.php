@@ -15,7 +15,7 @@
  * License URI:       https://www.gnu.org/licenses/gpl-3.0.txt
  *
 HTML Forms
-Copyright (C) 2017-2020, Danny van Kooten, danny@ibericode.com
+Copyright (C) 2017-2020,hossein soltanian, hosseinbidar7@gmail.com
 
 This program is free software: you can redistribute it and/or modify
 it under the terms of the GNU General Public License as published by
@@ -35,6 +35,10 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
  *
  * @see get_post_type_labels() for label keys.
  */
+
+if ( ! defined( 'ABSPATH' ) ) {
+	exit();
+}
 
 
 // load Style
