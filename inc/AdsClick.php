@@ -22,20 +22,22 @@ class utechiaads_shortcode_class {
     }
      
     }
-
 ///update post meta 
 
 add_action('wp_ajax_Utechia_Clicks_Ads', 'Utechia_Clicks_Ads');
 add_action('wp_ajax_nopriv_Utechia_Clicks_Ads', 'Utechia_Clicks_Ads');
 
-function Utechia_Clicks_Ads()
-{
-    if (isset($_POST['post_id']) && isset($_POST['action'])) {
-        $count = get_post_meta($_POST['post_id'], 'Clicks', true);
-        $count = esc_html($count);
-        update_post_meta($_POST['post_id'], 'Clicks', ($count === '' ? 1 : $count + 1));
+function Utechia_Clicks_Ads() {
+
+    if (  isset( $_POST['post_id'] ) && isset($_POST['action']) )
+     {
+        $count = get_post_meta( $_POST['post_id'], 'Clicks', true );
+        $count=esc_html($count);
+        $posid=sanitize_text_field($_POST['post_id']);
+        update_post_meta( $posid, 'Clicks', ( $count === '' ? 1 : $count + 1 ) );
     }
     exit();
+
 }
 
 ///update post meta 
