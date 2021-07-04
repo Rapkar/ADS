@@ -67,8 +67,8 @@ class AdsElementor extends Widget_Base
         $url = get_post_meta($post->ID, '_utechia_Adress_meta_key', true);
 ?>
         <?php if (has_post_thumbnail($post)) : ?>
-            <a class="widget-utechia-ads" href="<?= $url; ?>" post-id="<?= $id; ?>">
-                <img class="img-fluid" src="<?= $img ?>"></img>
+            <a class="widget-utechia-ads" href="<?php  _e($url); ?>" post-id="<?php _e($id); ?>">
+                <img class="img-fluid" src="<?php  _e($img) ?>"></img>
             </a>
 
         <?php  endif; ?>
