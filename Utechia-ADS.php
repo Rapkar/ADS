@@ -67,7 +67,10 @@ require_once(__DIR__.'/inc/AdsClick.php');
 
 //update Click ajax
 
-require_once(__DIR__.'/inc/AdsElementor.php');
+ if(is_plugin_active('elementor/elementor.php')){
+    require_once(__DIR__.'/inc/AdsElementor.php');
+ }
+
 
 
 ?>
