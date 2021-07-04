@@ -17,8 +17,9 @@ function utechia_custom_box_html($post)
     $value = get_post_meta($post->ID, '_utechia_Adress_meta_key', true);
 ?>
 
+
     <label for="Adress">Your Advertising address ▒▒▒=></label>
-    <input style="width:50%" type="text" name="Utechia_Ads_Adress" placeholder="http://utechia.com" value="<?php echo esc_html($value); ?>"></input>
+    <input style="width:50%" type="text" name="Utechia_Ads_Adress" placeholder="<?php echo esc_url('http://utechia.com'); ?>" value="<?php echo esc_url($value); ?>"></input>
 <?php
 }
 
@@ -27,12 +28,9 @@ add_action('add_meta_boxes', 'Utechia_ads_add_custom_box');
 
 function utechia_ads_custom_box_html_link($post_id)
 {
-
     if (isset($_POST['Utechia_Ads_Adress'])) {
-        if( strpos( $_POST['Utechia_Ads_Adress'],'http://')==false ){
-            $_POST['Utechia_Ads_Adress']='http://'.$_POST['Utechia_Ads_Adress'];
-        }
-        update_post_meta($post_id, '_utechia_Adress_meta_key', sanitize_text_field($_POST['Utechia_Ads_Adress']));
+        $res=sanitize_text_field($_POST['Utechia_Ads_Adress']);
+        update_post_meta($post_id, '_utechia_Adress_meta_key', $res);
     }
 }
 add_action('save_post', 'utechia_ads_custom_box_html_link');
@@ -56,7 +54,7 @@ function utechia_custom_box_html_date($post)
 ?>
 
     <label for="Adress">Your Advertising End Time ▒▒▒=></label>
-    <input style="width:50%" type="date" name="Utechia_Ads_Adress_date" placeholder="http://utechia.com" value="<?php echo esc_html($value); ?>"></input>
+    <input style="width:50%" type="date" name="Utechia_Ads_Adress_date" placeholder="<?php _e( 'http://utechia.com'); ?>" value="<?php echo esc_html($value); ?>"></input>
 <?php
 }
 
@@ -67,7 +65,8 @@ function utechia_ads_custom_box_html_date($post_id)
 {
 
     if (isset($_POST['Utechia_Ads_Adress_date'])) {
-        update_post_meta($post_id, '_utechia_Adress_date_meta_key', sanitize_text_field($_POST['Utechia_Ads_Adress_date']));
+        $res=sanitize_text_field($_POST['Utechia_Ads_Adress_date']);
+        update_post_meta($post_id, '_utechia_Adress_date_meta_key', $res);
     }
 }
 add_action('save_post', 'utechia_ads_custom_box_html_date');
